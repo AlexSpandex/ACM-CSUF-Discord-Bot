@@ -47,6 +47,8 @@ class Schedules(Cog):
     async def _schedule_add(self, ctx: SlashContext, text: str):
         await ctx.send(content="schedule add")
 
+
+    #schedule remove
     @cog_ext.cog_subcommand(base="schedule", name="remove", description="Remove a class from your schedule", guild_ids=guild_ids)
     async def _schedule_remove(self, ctx: SlashContext, text: str):
         with open(classes_path, 'r') as openfile:
@@ -58,7 +60,7 @@ class Schedules(Cog):
             "MATH 338-01": ["Bob", "Kevin"]
         }
         await ctx.send(content="schedule remove")
-        
+    
 
     # two json files, classes.json, students.json
 
