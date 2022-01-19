@@ -49,7 +49,16 @@ class Schedules(Cog):
 
     @cog_ext.cog_subcommand(base="schedule", name="remove", description="Remove a class from your schedule", guild_ids=guild_ids)
     async def _schedule_remove(self, ctx: SlashContext, text: str):
+        with open(classes_path, 'r') as openfile:
+            json_object = json.load(openfile)
+            print(json_object)
+
+        class_test_dict = {
+            "CPSC 131-05": ["Aaron"],
+            "MATH 338-01": ["Bob", "Kevin"]
+        }
         await ctx.send(content="schedule remove")
+        
 
     # two json files, classes.json, students.json
 

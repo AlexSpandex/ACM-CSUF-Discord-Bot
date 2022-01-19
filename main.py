@@ -9,7 +9,7 @@ from discord_slash import SlashCommand, SlashContext
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('!'), intents=discord.Intents.all())
 slash = SlashCommand(bot, sync_commands=True)
 bot.load_extension("cogs.schedules")
-bot.load_extension("cogs.roles")
+# bot.load_extension("cogs.roles")
 
 
 @bot.event  #creates a bot event
